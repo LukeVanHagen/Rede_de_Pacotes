@@ -11,28 +11,58 @@
         <!-- Dispositivos de rede -->
         <div class="device" id="device1">Dispositivo 1</div>
         <div class="device" id="device2">Dispositivo 2</div>
-        <div class="router" id="router">Roteador</div>
+        
 
         <!-- Pacotes -->
         <div class="packet" id="packet1"></div>
     </div>
+
+    <ul id="messageList"></ul>
 
     <div id="controls">
         <label for="origin">Origem:</label>
         <select id="origin">
             <option value="device1">Dispositivo 1</option>
             <option value="device2">Dispositivo 2</option>
+            
         </select>
 
         <label for="destination">Destino:</label>
         <select id="destination">
             <option value="device1">Dispositivo 1</option>
             <option value="device2">Dispositivo 2</option>
+        
         </select>
 
         <button id="sendPacket">Enviar Pacote</button>
     </div>
 
+    
+   <!-- ... (código HTML existente) ... -->
+
+<div id="deviceForm">
+    <h2>Adicionar Equipamento</h2>
+    <form id="addDeviceForm">
+        <label for="deviceType">Tipo de Equipamento:</label>
+        <select id="deviceType" required>
+            <option value="dispositivo">Dispositivo</option>
+            <option value="roteador">Roteador</option>
+            <option value="server">Servidor</option>
+        </select>
+
+        <label for="deviceName">Nome do Equipamento:</label>
+        <input type="text" id="deviceName" required>
+
+        <label for="deviceIP">Endereço IP:</label>
+        <input type="text" id="deviceIP" required>
+
+        <button type="submit">Adicionar Equipamento</button>
+    </form>
+</div>
+
+
     <script src="script.js"></script>
+
+
 </body>
 </html>
