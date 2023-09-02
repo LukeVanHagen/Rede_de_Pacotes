@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulação de Rede</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div id="network">
+        <!-- Dispositivos de rede -->
+        <div class="device" id="device1">Dispositivo 1</div>
+        <div class="device" id="device2">Dispositivo 2</div>
+        <div class="router" id="router">Roteador</div>
+
+        <!-- Pacotes -->
+        <div class="packet" id="packet1"></div>
+    </div>
+
+    <div id="controls">
+        <label for="origin">Origem:</label>
+        <select id="origin">
+            <option value="device1">Dispositivo 1</option>
+            <option value="device2">Dispositivo 2</option>
+        </select>
+
+        <label for="destination">Destino:</label>
+        <select id="destination">
+            <option value="device1">Dispositivo 1</option>
+            <option value="device2">Dispositivo 2</option>
+        </select>
+
+        <button id="sendPacket">Enviar Pacote</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
