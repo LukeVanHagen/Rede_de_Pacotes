@@ -1,13 +1,23 @@
+/* Importando fontes do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Share+Tech+Mono&display=swap');
 
+/* Reset de estilos padrão para evitar inconsistências entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o corpo da página */
 body {
     font-family: 'Orbitron', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(45deg, #f06, #9f6, #06f, #f60);
+    background: linear-gradient(45deg, rgb(255, 102, 0), rgb(255, 51, 204), rgb(102, 0, 204), rgb(255, 102, 0));
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
     color: #fff;
+    text-align: center;
 }
 
 @keyframes gradient {
@@ -22,6 +32,7 @@ body {
     }
 }
 
+/* Estilos para a rede */
 #network {
     display: flex;
     justify-content: space-between;
@@ -31,25 +42,35 @@ body {
 .device, .router, .server {
     width: 140px;
     height: 50px;
-    background-color: #3498db;
-    border: 2px solid #2980b9;
+    background-color: rgb(52, 152, 219);
+    border: 2px solid rgb(41, 128, 185);
     text-align: center;
     line-height: 50px;
     color: #fff;
     font-size: 16px;
     text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease;
 }
 
+.device:hover, .router:hover, .server:hover {
+    transform: scale(1.05);
+    background-color: rgb(41, 128, 185);
+}
+
+/* Estilos para os pacotes */
 .packet {
     width: 20px;
     height: 20px;
-    background-color: #e74c3c;
+    background-color: rgb(38, 221, 83);
     border-radius: 50%;
     position: absolute;
     display: none;
-    transition: all 0.5s;
+    transition: all 0.5s ease-in-out;
 }
 
+/* Estilos para os controles */
 #controls {
     margin-top: 20px;
     text-align: center;
@@ -58,36 +79,37 @@ body {
 label {
     margin-right: 10px;
     font-size: 18px;
-    color: #3498db;
+    color: rgb(255, 255, 255);
 }
 
 select, button {
     padding: 10px 20px;
-    background-color: #3498db;
+    background-color: rgb(52, 152, 219);
     color: #fff;
     border: none;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
+    border-radius: 5px;
 }
 
 select:hover, button:hover {
-    background-color: #2980b9;
+    background-color: rgb(41, 128, 185);
 }
 
+/* Estilos para os formulários */
 #deviceForm, #routerForm, #serverForm {
     margin: 20px;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.7);
-    border: 2px solid #3498db;
+    border: 2px solid rgb(52, 152, 219);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    
 }
 
 h2 {
     font-size: 24px;
-    color: #3498db;
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
 }
 
@@ -96,13 +118,14 @@ input[type="text"] {
     padding: 10px;
     margin: 10px 0;
     background-color: #000;
-    border: 1px solid #3498db;
+    border: 1px solid rgb(52, 152, 219);
     color: #fff;
     font-size: 16px;
     transition: border-color 0.3s ease;
+    border-radius: 5px;
 }
 
 input[type="text"]:focus {
     outline: none;
-    border-color: #2980b9;
+    border-color: rgb(41, 128, 185);
 }

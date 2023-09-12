@@ -9,31 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let isPacketMoving = false;
 
-    sendPacketButton.addEventListener("click", function () {
-        if (!isPacketMoving) {
-            const origin = document.getElementById(originSelect.value);
-            const destination = document.getElementById(destinationSelect.value);
 
-            const originRect = origin.getBoundingClientRect();
-            const destinationRect = destination.getBoundingClientRect();
-
-            packet.style.top = `${originRect.top + originRect.height / 2}px`;
-            packet.style.left = `${originRect.left + originRect.width / 2}px`;
-
-            packet.style.display = "block";
-            isPacketMoving = true;
-
-            setTimeout(function () {
-                packet.style.top = `${destinationRect.top + destinationRect.height / 2}px`;
-                packet.style.left = `${destinationRect.left + destinationRect.width / 2}px`;
-
-                setTimeout(function () {
-                    packet.style.display = "none";
-                    isPacketMoving = false;
-                }, 500);
-            }, 500);
-        }
-    });
     
     const addDeviceForm = document.getElementById("addDeviceForm");
     const deviceNameInput = document.getElementById("deviceName");
@@ -175,8 +151,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Resto do código para adicionar dispositivos, roteadores e servidores...
+   
 });
+
 
 
 
